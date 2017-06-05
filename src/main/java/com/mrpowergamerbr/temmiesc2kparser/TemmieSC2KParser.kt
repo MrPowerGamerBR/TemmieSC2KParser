@@ -44,9 +44,14 @@ class TemmieSC2KParser {
     companion object {
         @JvmStatic
         fun readCity(file: File): SC2KCity? {
-            var city = SC2KCity()
+            val bytes = Files.toByteArray(file) // And read it to a byte array!
 
-            val bytes = Files.toByteArray(file); // And read it to a byte array!
+            return readCity(bytes)
+        }
+
+        @JvmStatic
+        fun readCity(bytes: ByteArray): SC2KCity? {
+            var city = SC2KCity()
 
             val binaryStream = SC2KBinaryStream(bytes);
             // http://djm.cc/simcity-2000-info.txt

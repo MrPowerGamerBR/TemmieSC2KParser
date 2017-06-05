@@ -6,7 +6,9 @@ Because why not? :)
 
 ### Loading a save file and reading the city's name
 (In this example I used "RETREAT.SC2" from SimCity 2000's City folder)
+
 **Code:**
+
 ```java
 SC2KCity city = TemmieSC2KParser.loadCity(new File("path to sc2 file"));
 System.out.println(city.getCityName());
@@ -17,7 +19,9 @@ Kathy's Retreat
 ```
 
 You can also use Kotlin
+
 **Code:**
+
 ```java
 var city = TemmieSC2KParser.loadCity(File("path to sc2 file"));
 println(city.cityName);
